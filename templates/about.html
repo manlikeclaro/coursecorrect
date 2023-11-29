@@ -1,0 +1,95 @@
+{% extends 'layouts/base_layout.html' %}
+
+{% load static %}
+
+{% block title %}
+    About
+{% endblock %}
+
+{% block content %}
+
+    {% include 'partials/menu.html' %}
+
+    <section class="page-header">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="content">
+                        <h1 class="page-name">About Us</h1>
+                        <ol class="breadcrumb">
+                            <li><a href="{% url 'home' %}">Home</a></li>
+                            <li class="active">about us</li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="about section">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <img class="img-responsive mt-40" src="{% static 'app/images/cc-logo2.png' %}">
+                </div>
+                <div class="col-md-6">
+                    <h2 class="mt-40">About US</h2>
+                    <br>
+                    <p>"Course Correct" is a cutting-edge web application tailored to meet the diverse academic needs of
+                        students at USIU-Africa. Serving as a centralized hub, this platform offers a comprehensive
+                        catalog of previous exam papers across various majors. With an intuitive user interface, the
+                        application presents a visually appealing gallery of courses on its homepage. Each course tile
+                        is interactive, leading users to dedicated pages featuring concise product descriptions and
+                        easily accessible download links for related exam papers. In future updates, Course Correct aims
+                        to introduce a premium feature, allowing users to access solutions for exam papers through a
+                        subscription model, thereby enhancing exam preparation. The application is set to incorporate
+                        M-Pesa integration for seamless and secure payment transactions. Moreover, Course Correct boasts
+                        a dynamic search bar functionality, enabling users to efficiently locate specific courses or
+                        majors of interest, thereby minimizing navigation time. Through continuous refinement and
+                        user-centric design, Course Correct aspires to be the primary platform for USIU-Africa students,
+                        offering valuable academic resources and a sustainable business model.</p>
+
+                    <a href="#!" class="btn btn-main btn-round mt-20">Download Company Profile</a>
+                </div>
+            </div>
+        </div>
+        <br><br>
+    </section>
+
+    <section class="team-members ">
+        <div class="container">
+            <div class="row">
+                <div class="title"><h2>Team Members</h2></div>
+            </div>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="team-member text-center">
+                        <img class="img-circle" src="{% static 'app/images/team/team-1.jpg' %}">
+                        <h4>Jonathon Andrew</h4>
+                        <p>Founder</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="team-member text-center">
+                        <img class="img-circle" src="{% static 'app/images/team/team-2.jpg' %}">
+                        <h4>Adipisci Velit</h4>
+                        <p>Developer</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="team-member text-center">
+                        <img class="img-circle" src="{% static 'app/images/team/team-3.jpg' %}">
+                        <h4>John Fexit</h4>
+                        <p>Shop Manager</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br><br>
+    </section>
+
+{% endblock %}
+
+
+
+

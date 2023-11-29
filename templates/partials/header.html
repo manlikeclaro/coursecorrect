@@ -1,0 +1,177 @@
+{% load static %}
+
+<section class="top-header">
+    <div class="container">
+        <div class="row">
+            {#        <div class="row d-flex align-items-center justify-content-between">#}
+            {#            <div class="logo text-center">#}
+
+            <div class="col-md-6">
+                <!-- First child div content goes here -->
+                <div class="card">
+                    <div class="card-body">
+                        <a href="{% url 'home' %}">
+                            <!-- replace logo here -->
+                            <img src="{% static 'app/images/cc-logo4.png' %}" alt="" class="img-fluid rounded"
+                                 style="max-width: 200px; max-height: 100px; border-radius: 10px;">
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <!-- Second child div content goes here -->
+                <div class="card">
+                    <div class="card-body ">
+                        <ul class="top-menu text-right list-inline">
+                            <li class="dropdown search dropdown-slide">
+                                <a href="#!" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown"><i
+                                        class="tf-ion-ios-search-strong"></i> Search</a>
+                                <ul class="dropdown-menu search-dropdown">
+                                    <li>
+                                        <form method="get" action="{% url 'search' %}">
+                                            <input type="search" name="search" class="form-control"
+                                                   placeholder="Search...">
+                                        </form>
+                                    </li>
+                                </ul>
+                            </li>
+
+                            {% if user.is_authenticated %}
+                                <!-- Display logout button or other authenticated user content -->
+                                <li class="li">
+                                    <p>Welcome, <span>{{ user.first_name | capfirst }}</span>.</p>
+                                </li>
+                            {% endif %}
+
+                            {% if user.is_authenticated %}
+                                <!-- Display logout button or other authenticated user content -->
+                                <li class="li">
+                                    <a href="{% url 'logout' %}" class="btn btn-main btn-small btn-round-full"
+                                       style="background: #000; color: #fff; font-size: 11px; letter-spacing: 1px;
+                                            padding: 8px 16px; text-transform: uppercase; font-weight: 200;">
+                                        Logout</a>
+                                </li>
+                            {% else %}
+                                <!-- Display login button for non-authenticated users -->
+                                <li class="li">
+                                    <a href="{% url 'sign-in' %}" class="btn btn-main btn-small btn-round-full"
+                                       style="background: #000; color: #fff; font-size: 11px; letter-spacing: 1px;
+                                            padding: 14px 35px; text-transform: uppercase; font-weight: 200;">
+                                        Login</a>
+                                </li>
+                            {% endif %}
+
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+
+            {#            <div>#}
+            {#                <a href="{% url 'home' %}">#}
+            {#                    <!-- replace logo here -->#}
+            {#                    <img src="{% static 'app/images/cc-logo4.png' %}" alt="" class="img-fluid rounded"#}
+            {#                         style="max-width: 200px; max-height: 100px; border-radius: 10px;">#}
+            {#                </a>#}
+            {#            </div>#}
+            {#            <div>#}
+            {#                <ul class="top-menu text-right list-inline">#}
+            {##}
+            {#                    <li class="dropdown search dropdown-slide">#}
+            {#                        <a href="#!" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown"><i#}
+            {#                                class="tf-ion-ios-search-strong"></i> Search</a>#}
+            {#                        <ul class="dropdown-menu search-dropdown">#}
+            {#                            <li>#}
+            {#                                <form method="get" action="{% url 'search' %}">#}
+            {#                                    <input type="search" name="search" class="form-control" placeholder="Search...">#}
+            {#                                </form>#}
+            {#                            </li>#}
+            {#                        </ul>#}
+            {#                    </li>#}
+            {##}
+            {#                    {% if user.is_authenticated %}#}
+            {#                        <!-- Display logout button or other authenticated user content -->#}
+            {#                        <li class="li">#}
+            {#                            <p>Welcome, <span>{{ user.first_name | capfirst }}</span>.</p>#}
+            {#                        </li>#}
+            {#                    {% endif %}#}
+            {##}
+            {#                    {% if user.is_authenticated %}#}
+            {#                        <!-- Display logout button or other authenticated user content -->#}
+            {#                        <li class="li">#}
+            {#                            <a href="{% url 'logout' %}" class="btn btn-main btn-small btn-round-full"#}
+            {#                               style="background: #000; color: #fff; font-size: 11px; letter-spacing: 1px;#}
+            {#                                padding: 8px 16px; text-transform: uppercase; font-weight: 200;">#}
+            {#                                Logout</a>#}
+            {#                        </li>#}
+            {#                    {% else %}#}
+            {#                        <!-- Display login button for non-authenticated users -->#}
+            {#                        <li class="li">#}
+            {#                            <a href="{% url 'sign-in' %}" class="btn btn-main btn-small btn-round-full"#}
+            {#                               style="background: #000; color: #fff; font-size: 11px; letter-spacing: 1px;#}
+            {#                                padding: 14px 35px; text-transform: uppercase; font-weight: 200;">#}
+            {#                                Login</a>#}
+            {#                        </li>#}
+            {#                    {% endif %}#}
+            {##}
+            {#                </ul>#}
+            {#            </div>#}
+
+
+            {#            <div class="col-md-4 col-xs-12 col-sm-4">#}
+            {#                <!-- Site Logo -->#}
+            {#                <div class="logo text-center">#}
+            {#                    <a href="{% url 'home' %}">#}
+            {#                        <!-- replace logo here -->#}
+            {#                        <img src="{% static 'app/images/cc-logo4.png' %}" alt="" class="img-fluid rounded"#}
+            {#                             style="max-width: 200px; max-height: 100px; border-radius: 10px;">#}
+            {#                    </a>#}
+            {#                </div>#}
+            {#            </div>#}
+
+            {#            <div class="col-md-4 col-xs-12 col-sm-4">#}
+            {#                <!-- Cart -->#}
+            {#                <ul class="top-menu text-right list-inline">#}
+            {##}
+            {#                    <li class="dropdown search dropdown-slide">#}
+            {#                        <a href="#!" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown"><i#}
+            {#                                class="tf-ion-ios-search-strong"></i> Search</a>#}
+            {#                        <ul class="dropdown-menu search-dropdown">#}
+            {#                            <li>#}
+            {#                                <form method="get" action="{% url 'search' %}">#}
+            {#                                    <input type="search" name="search" class="form-control" placeholder="Search...">#}
+            {#                                </form>#}
+            {#                            </li>#}
+            {#                        </ul>#}
+            {#                    </li>#}
+            {##}
+            {#                    {% if user.is_authenticated %}#}
+            {#                        <!-- Display logout button or other authenticated user content -->#}
+            {#                        <li class="li">#}
+            {#                            <p>Welcome, <span>{{ user.first_name | capfirst }}</span>.</p>#}
+            {#                        </li>#}
+            {#                    {% endif %}#}
+            {##}
+            {#                    {% if user.is_authenticated %}#}
+            {#                        <!-- Display logout button or other authenticated user content -->#}
+            {#                        <li class="li">#}
+            {#                            <a href="{% url 'logout' %}" class="btn btn-main btn-small btn-round-full"#}
+            {#                               style="background: #000; color: #fff; font-size: 11px; letter-spacing: 1px;#}
+            {#                                padding: 8px 16px; text-transform: uppercase; font-weight: 200;">#}
+            {#                                Logout</a>#}
+            {#                        </li>#}
+            {#                    {% else %}#}
+            {#                        <!-- Display login button for non-authenticated users -->#}
+            {#                        <li class="li">#}
+            {#                            <a href="{% url 'sign-in' %}" class="btn btn-main btn-small btn-round-full"#}
+            {#                               style="background: #000; color: #fff; font-size: 11px; letter-spacing: 1px;#}
+            {#                                padding: 14px 35px; text-transform: uppercase; font-weight: 200;">#}
+            {#                                Login</a>#}
+            {#                        </li>#}
+            {#                    {% endif %}#}
+            {##}
+            {#                </ul>#}
+            {#            </div>#}
+        </div>
+    </div>
+</section>

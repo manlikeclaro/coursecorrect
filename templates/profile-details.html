@@ -1,0 +1,81 @@
+{% extends 'layouts/base_layout.html' %}
+
+{% load static %}
+
+{% block title %}
+    Profile
+{% endblock %}
+
+{% block content %}
+
+    {% include 'partials/menu.html' %}
+
+    <section class="page-header">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    {% include 'partials/alerts.html' %}
+
+                    <div class="content">
+                        <h1 class="page-name">Dashboard</h1>
+                        <ol class="breadcrumb">
+                            <li><a href="{% url 'home' %}">Home</a></li>
+                            <li class="active">my account</li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="user-dashboard page-wrapper">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+{#                    <ul class="list-inline dashboard-menu text-center">#}
+{#                        <li><a href="{% url 'address' %}">Address</a></li>#}
+{#                        <li><a class="active" href="{% url 'profile' %}">Profile Details</a></li>#}
+{#                    </ul>#}
+                    <div class="dashboard-wrapper dashboard-user-profile">
+                        <div class="media">
+                            <div class="pull-left text-center" href="#!">
+
+                                {% if user.customuser.profile_picture.url %}
+                                    <img class="media-object user-img" src="{{ user.customuser.profile_picture.url }}"
+                                         alt="Image">
+                                {% else %}
+                                    <img class="media-object user-img" src="{% static 'app/images/default-user.png' %}"
+                                         alt="Image">
+                                {% endif %}
+
+                                {#                                <a href="{% url 'update-profile' %}" class="btn btn-transparent mt-20">Update User#}
+                                {#                                    Details</a>#}
+                                {#                                <a href="{% url 'update-profile-details' %}" class="btn btn-transparent mt-20">update#}
+                                {#                                    Image</a>#}
+                            </div>
+                            <div class="media-body">
+                                <ul class="user-profile-list">
+                                    <li><span>Full Name:</span>{{ user.first_name }} {{ user.last_name }}</li>
+                                    <li><span>Username:</span>{{ user.username }}</li>
+                                    <li><span>Email:</span>{{ user.email }}</li>
+                                    <li><span>Date Joined:</span>{{ user.date_joined }}</li>
+                                    <li><a href="{% url 'update-profile' %}" class="btn btn-transparent mt-20">Update
+                                        User Settings</a></li>
+                                </ul>
+                            </div>
+{#                            <div class="media-body">#}
+{#                                <ul class="user-profile-list">#}
+{#                                    <li><span>Phone No:</span>{{ user.customuser.phone_number }}</li>#}
+{#                                    <li><span>DOB:</span>{{ user.customuser.dob }}</li>#}
+{#                                    <li><a href="{% url 'update-profile-details' %}" class="btn btn-transparent mt-20">Update#}
+{#                                        User Profile</a></li>#}
+{#                                </ul>#}
+{#                            </div>#}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+{% endblock %}

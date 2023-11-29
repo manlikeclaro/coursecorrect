@@ -1,0 +1,107 @@
+[
+  {
+    "product_name": "Advanced Environmental Studies",
+    "product_code": "AES201",
+    "product_price": 849,
+    "product_description": "Dive deep into environmental science with 'Advanced Environmental Studies (AES201).' Explore complex ecosystems, climate change dynamics, and sustainable practices. Gain insights to address pressing environmental challenges and contribute to a greener future.",
+    "sale": false
+  },
+  {
+    "product_name": "Statistical Methods for Decision Making",
+    "product_code": "SMDM202",
+    "product_price": 799,
+    "product_description": "Elevate your analytical skills with 'Statistical Methods for Decision Making (SMDM202).' Delve into advanced statistical techniques, probability theory, and data-driven decision-making. Acquire the tools to interpret and draw meaningful conclusions from data.",
+    "sale": false
+  },
+  {
+    "product_name": "Criminal Psychology and Behavior Analysis",
+    "product_code": "CPBA301",
+    "product_price": 899,
+    "product_description": "Unravel the mysteries of criminal behavior with 'Criminal Psychology and Behavior Analysis (CPBA301).' Explore psychological theories behind criminal minds, forensic psychology, and behavioral profiling. Gain insights crucial for criminal justice professionals.",
+    "sale": false
+  },
+  {
+    "product_name": "Legal Ethics and Professional Responsibility",
+    "product_code": "LEPR302",
+    "product_price": 749,
+    "product_description": "Navigate the ethical complexities of law with 'Legal Ethics and Professional Responsibility (LEPR302).' Examine the principles guiding legal professionals, ethical dilemmas, and the responsibilities inherent in the legal profession.",
+    "sale": false
+  },
+  {
+    "product_name": "Advanced Education Administration",
+    "product_code": "AEA401",
+    "product_price": 899,
+    "product_description": "Propel your career in education with 'Advanced Education Administration (AEA401).' Delve into educational leadership, policy development, and strategic planning. Acquire the skills needed to lead educational institutions effectively.",
+    "sale": false
+  },
+  {
+    "product_name": "Mathematical Modeling and Simulation",
+    "product_code": "MMS402",
+    "product_price": 799,
+    "product_description": "Unlock the power of mathematics in 'Mathematical Modeling and Simulation (MMS402).' Explore advanced modeling techniques, simulations, and their applications. Develop the skills to analyze complex systems through mathematical abstraction.",
+    "sale": false
+  },
+  {
+    "product_name": "Global Perspectives in Criminal Justice",
+    "product_code": "GPCJ501",
+    "product_price": 899,
+    "product_description": "Broaden your understanding of criminal justice with 'Global Perspectives in Criminal Justice (GPCJ501).' Explore international legal systems, transnational crime, and the challenges of enforcing justice on a global scale.",
+    "sale": false
+  },
+  {
+    "product_name": "Advanced Topics in Environmental Policy",
+    "product_code": "ATEP502",
+    "product_price": 849,
+    "product_description": "Delve into intricate environmental policies with 'Advanced Topics in Environmental Policy (ATEP502).' Explore the intersection of law, politics, and environmental conservation. Analyze case studies and formulate strategies for sustainable practices.",
+    "sale": false
+  },
+  {
+    "product_name": "Leadership Strategies in Education",
+    "product_code": "LSEE601",
+    "product_price": 799,
+    "product_description": "Refine your leadership skills with 'Leadership Strategies in Education (LSEE601).' Explore innovative educational leadership models, organizational dynamics, and effective strategies for leading educational institutions in a rapidly changing world.",
+    "sale": false
+  },
+  {
+    "product_name": "Advanced Data Analysis and Visualization",
+    "product_code": "ADAV602",
+    "product_price": 899,
+    "product_description": "Master data analysis and visualization with 'Advanced Data Analysis and Visualization (ADAV602).' Dive into advanced statistical methods, data interpretation, and cutting-edge visualization tools. Develop the skills to derive meaningful insights from complex datasets.",
+    "sale": false
+  },
+  {
+    "product_name": "Forensic Science and Criminal Investigations",
+    "product_code": "FSCI701",
+    "product_price": 849,
+    "product_description": "Enter the world of forensic science with 'Forensic Science and Criminal Investigations (FSCI701).' Explore forensic techniques, crime scene analysis, and the role of science in solving criminal cases. Gain insights into the intersection of science and law enforcement.",
+    "sale": false
+  },
+  {
+    "product_name": "International Human Rights Law",
+    "product_code": "IHRL702",
+    "product_price": 749,
+    "product_description": "Dive into the complexities of human rights with 'International Human Rights Law (IHRL702).' Explore international legal frameworks, humanitarian principles, and the challenges of protecting human rights on a global scale.",
+    "sale": false
+  },
+  {
+    "product_name": "Technology in Education",
+    "product_code": "TIE801",
+    "product_price": 799,
+    "product_description": "Integrate technology into education with 'Technology in Education (TIE801).' Explore the latest educational technologies, e-learning platforms, and strategies for leveraging technology to enhance teaching and learning experiences.",
+    "sale": false
+  },
+  {
+    "product_name": "Advanced Probability Theory",
+    "product_code": "APT802",
+    "product_price": 849,
+    "product_description": "Deepen your understanding of probability with 'Advanced Probability Theory (APT802).' Explore complex probability distributions, stochastic processes, and their applications in various fields. Acquire the mathematical tools for advanced statistical modeling.",
+    "sale": false
+  },
+  {
+    "product_name": "Advanced Topics in Criminal Law",
+    "product_code": "ATCL901",
+    "product_price": 899,
+    "product_description": "Delve into nuanced legal issues with 'Advanced Topics in Criminal Law (ATCL901).' Explore emerging trends in criminal law, legal controversies, and the evolving landscape of criminal justice. Analyze landmark cases and their impact on legal practice.",
+    "sale": false
+  }
+]

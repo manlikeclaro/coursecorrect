@@ -1,0 +1,74 @@
+{% extends 'layouts/base_layout.html' %}
+
+{% load static %}
+
+{% block title %}
+    Home
+{% endblock %}
+
+{% block content %}
+
+    <!-- Main Menu Section -->
+    {% include 'partials/menu.html' %}
+
+    <section class="products section bg-gray">
+        <div class="container">
+            <div class="row">
+                {% include 'partials/alerts.html' %}
+                <div class="title text-center">
+                    <h2>Popular Products</h2>
+                </div>
+            </div>
+            <div class="row">
+
+                {% for product in products %}
+                    <div class="col-md-4">
+                        <div class="product-item">
+                            <a href="{% url 'product' product.id %}">
+                                <div class="product-thumb">
+                                    {% if product.sale %}
+                                        <span class="bage">Sale</span>
+                                    {% endif %}
+                                    <img class="img-responsive" src="{{ product.product_image.url }} "
+                                         alt="product-img"/>
+
+                                </div>
+                                <div class="product-content">
+                                    <h4><a href="{% url 'product' product.id %}">{{ product.product_name }}</a></h4>
+                                    <p class="price">{{ product.product_code }}</p>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                {% endfor %}
+
+            </div>
+            <div>
+                <nav aria-label="Page navigation example">
+                    <ul class="pagination justify-content-end">
+                        {% if products.has_previous %}
+                            <li class="page-item">
+                                <a class="page-link" href="?page={{ products.previous_page_number }}">Previous</a>
+                            </li>
+                        {% else %}
+                            <li class="page-item disabled">
+                                <a class="page-link" href="#" tabindex="-1" aria-disabled="true">Previous</a>
+                            </li>
+                        {% endif %}
+
+                        {% if products.has_next %}
+                            <li class="page-item">
+                                <a class="page-link" href="?page={{ products.next_page_number }}">Next</a>
+                            </li>
+                        {% else %}
+                            <li class="page-item disabled">
+                                <a class="page-link" href="#" tabindex="-1" aria-disabled="true">Next</a>
+                            </li>
+                        {% endif %}
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </section>
+
+{% endblock %}
