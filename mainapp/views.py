@@ -16,6 +16,7 @@ from mainapp.models import Product, CustomUser
 # Create your views here.
 def home(request):
     products = Product.objects.all()
+    # products = Product.objects.all().order_by('-pk')
     # products = Product.objects.all().order_by('product_price')
     # products = Product.objects.all().filter(product_category='education')
     # products = Product.objects.all().filter(product_category__icontains='ma')
@@ -34,7 +35,8 @@ def home(request):
 
 
 def shop(request):
-    products = Product.objects.all()
+    products = Product.objects.all().order_by('-pk')
+    # products = Product.objects.all()
     unique_category = set()
 
     # for item in products:
