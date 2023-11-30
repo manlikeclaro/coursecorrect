@@ -49,7 +49,7 @@
                         user-centric design, Course Correct aspires to be the primary platform for USIU-Africa students,
                         offering valuable academic resources and a sustainable business model.</p>
 
-                    <a href="#!" class="btn btn-main btn-round mt-20">Download Company Profile</a>
+                    <a href="{% static 'app/product.pdf' %}" class="btn btn-main btn-round mt-20" download="">Download Company Profile</a>
                 </div>
             </div>
         </div>
@@ -62,27 +62,41 @@
                 <div class="title"><h2>Team Members</h2></div>
             </div>
             <div class="row">
-                <div class="col-md-4">
-                    <div class="team-member text-center">
-                        <img class="img-circle" src="{% static 'app/images/team/team-1.jpg' %}">
-                        <h4>Jonathon Andrew</h4>
-                        <p>Founder</p>
-                    </div>
+                <div class="d-flex flex-wrap">
+                    {% for member in members %}
+                        <div class="col-md-4 team-member text-center">
+                            <img class="img-circle mt-10" src="{{ member.profile_picture.url }}">
+                            <h4>{{ member.member_name }}</h4>
+                            <p>{{ member.get_member_role_display }}</p>
+                        </div>
+                    {% endfor %}
                 </div>
-                <div class="col-md-4">
-                    <div class="team-member text-center">
-                        <img class="img-circle" src="{% static 'app/images/team/team-2.jpg' %}">
-                        <h4>Adipisci Velit</h4>
-                        <p>Developer</p>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="team-member text-center">
-                        <img class="img-circle" src="{% static 'app/images/team/team-3.jpg' %}">
-                        <h4>John Fexit</h4>
-                        <p>Shop Manager</p>
-                    </div>
-                </div>
+{#                <div class="col-md-4 ">#}
+{#                    {% for member in members %}#}
+{#                        <div class="team-member text-center">#}
+{#                            <img class="img-circle" src="{% static 'app/images/team/team-1.jpg' %}">#}
+{#                            <img class="img-circle" src="{{ member.profile_picture.url }}">#}
+{#                            <h4>{{ member.member_name }}</h4>#}
+{#                            <p>{{ member.get_member_role_display }}</p>#}
+{#                        </div>#}
+{#                    {% endfor %}#}
+{##}
+{##}
+{#                </div>#}
+{#                <div class="col-md-4">#}
+{#                    <div class="team-member text-center">#}
+{#                        <img class="img-circle" src="{% static 'app/images/team/team-2.jpg' %}">#}
+{#                        <h4>Adipisci Velit</h4>#}
+{#                        <p>Developer</p>#}
+{#                    </div>#}
+{#                </div>#}
+{#                <div class="col-md-4">#}
+{#                    <div class="team-member text-center">#}
+{#                        <img class="img-circle" src="{% static 'app/images/team/team-3.jpg' %}">#}
+{#                        <h4>John Fexit</h4>#}
+{#                        <p>Shop Manager</p>#}
+{#                    </div>#}
+{#                </div>#}
             </div>
         </div>
         <br><br>
