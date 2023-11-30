@@ -10,7 +10,7 @@ from django.shortcuts import render, redirect, get_object_or_404
 from django.views.generic import CreateView
 
 from mainapp.app_forms import ProductForm, UpdateUser, ProfileForm
-from mainapp.models import Product, CustomUser
+from mainapp.models import Product, CustomUser, TeamMember
 
 
 # Create your views here.
@@ -76,7 +76,9 @@ def address(request):
 
 
 def about(request):
-    return render(request, 'about.html')
+    members = TeamMember.objects.all()
+
+    return render(request, 'about.html', {'members': members})
 
 
 def sign_in(request):

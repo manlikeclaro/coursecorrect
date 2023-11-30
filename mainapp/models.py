@@ -40,3 +40,19 @@ class CustomUser(models.Model):
 
     def __str__(self):
         return f'{self.user.username}'
+
+
+class TeamMember(models.Model):
+    roles = (
+        ("web_admin", "Web Admin"),
+        ("content_manager", "Content Manager"),
+        ("web_developer", "Web Developer"),
+    )
+
+    member_name = models.CharField(max_length=40)
+    member_role = models.CharField(choices=roles, max_length=50)
+    profile_picture = models.ImageField(upload_to='profile_pics/', default='profile_pics/default-user.png', blank=True,
+                                        null=True)
+
+    def __str__(self):
+        return f'{self.member_name} - {self.member_role}'
